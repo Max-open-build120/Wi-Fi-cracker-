@@ -1,10 +1,7 @@
 # Wi-Fi-cracker-
 
 
-## Wi-Fi Cracker: Complete Guide to Wireless Network Security
-
-[![Security](https://img.shields.io/badge/Security-Awareness-red)](https://)
-[![License](https://img.shields.io/badge/Legal-)](https://)
+## Wi-Fi Cracker: Complete Guide to Wireless Network Security 
 
 ---
 
