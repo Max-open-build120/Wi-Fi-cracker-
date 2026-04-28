@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Cracker - Universal Network Penetration Tool</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff00;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #00ff00;
+        }
+        
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00ff00;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            color: #00cc00;
+        }
+        
+        .console {
+            background: #000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+            min-height: 300px;
+        }
+        
+        .console-line {
+            margin: 5px 0;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .prompt {
+            color: #00ff00;
+        }
+        
+        .output {
+            color: #00cc00;
+        }
+        
+        .error {
+            color: #ff0000;
+        }
+        
+        .warning {
+            color: #ffaa00;
+        }
+        
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .locked {
+            background: #111;
+            border: 2px solid #ff0000;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .locked h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+        
+        .telegram-btn {
+            display: inline-block;
+            background: #0088cc;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        
+        .telegram-btn:hover {
+            background: #006699;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #111;
+            border: 1px solid #00ff00;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #00ff00;
+            width: 0%;
+            animation: progress 3s forwards;
+        }
+        
+        @keyframes progress {
+            to { width: 67%; }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 2px solid #00ff00;
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wi-Fi CRACKER</h1>
+            <p class="tagline">Universal Network Penetration System</p>
+        </header>
+        
+        <div class="console" id="console">
+            <div class="console-line" style="animation-delay: 0.5s;"><span class="prompt">$</span> <span class="output">initiate_crack --target "HomeNetwork_5G" --range 100</span></div>
+            <div class="console-line" style="animation-delay: 1s;"><span class="output">[INFO] Initializing Wi-Fi Cracker v9.0...</span></div>
+            <div class="console-line" style="animation-delay: 1.5s;"><span class="output">[INFO] Loading FPGA decryption cluster...</span></div>
+            <div class="console-line" style="animation-delay: 2s;"><span class="output">[INFO] Calibrating high-gain antennas...</span></div>
+            <div class="console-line" style="animation-delay: 2.5s;"><span class="output">[INFO] Broadcasting deauthentication frames...</span></div>
+            <div class="console-line" style="animation-delay: 3s;"><span class="output">[INFO] Target device entering proximity range...</span></div>
+            <div class="console-line" style="animation-delay: 3.5s;"><span class="output">[INFO] Signal strength: -45 dBm</span></div>
+            <div class="console-line" style="animation-delay: 4s;"><span class="output">[INFO] Capturing 4-way handshake...</span></div>
+            <div class="console-line" style="animation-delay: 4.5s;"><span class="output">[SUCCESS] Handshake captured (WPA2-PSK)</span></div>
+            <div class="console-line" style="animation-delay: 5s;"><span class="output">[INFO] Initializing GPU decryption...</span></div>
+            <div class="console-line" style="animation-delay: 5.5s;"><span class="output">[INFO] Testing password combinations...</span></div>
+            <div class="console-line" style="animation-delay: 6s;">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="console-line" style="animation-delay: 9s;"><span class="error">[ERROR] LICENSE VALIDATION FAILED</span></div>
+            <div class="console-line" style="animation-delay: 9.5s;"><span class="warning">[WARNING] Decryption halted at 67%</span></div>
+            <div class="console-line" style="animation-delay: 10s;"><span class="warning">[WARNING] Password masked: ************</span></div>
+            <div class="console-line" style="animation-delay: 10.5s;"><span class="error">[LOCKDOWN] Full access requires valid license key</span></div>
+        </div>
+        
+        <div class="locked" id="locked" style="display: none;">
+            <h2>🔒 ACCESS DENIED</h2>
+            <p>Wi-Fi Cracker has successfully infiltrated the target network.</p>
+            <p>Decryption is <span style="color: #ffaa00;">67% complete</span>.</p>
+            <p>The password has been recovered but is encrypted.</p>
+            <p>To reveal the full password and unlock all features, a valid license is required.</p>
+            <br>
+            <p><strong>Contact the developer to purchase your license:</strong></p>
+            <a href="https://t.me/SteelOwnerX" class="telegram-btn">Contact on Telegram @Steel_OwnerX</a>
+        </div>
+        
+        <footer>
+            <p>Wi-Fi Cracker v9.0 | Forced Proximity Authentication System</p>
+            <p>FOR AUTHORIZED USE ONLY</p>
+        </footer>
+    </div>
+    
+    <script>
+        setTimeout(function() {
+            document.getElementById('locked').style.display = 'block';
+            document.getElementById('locked').scrollIntoView({ behavior: 'smooth' });
+        }, 11000);
+    </script>
+</body>
+                               </html>
+                               
